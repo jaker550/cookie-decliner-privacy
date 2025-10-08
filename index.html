@@ -16,237 +16,267 @@
             line-height: 1.6;
             color: #333;
             background: #f5f5f5;
-            padding: 20px;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
             background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-height: 100vh;
         }
 
-        h1 {
-            color: #1a1a1a;
-            margin-bottom: 10px;
-            font-size: 32px;
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 48px 32px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+
+        header .subtitle {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 48px 32px;
+        }
+
+        .last-updated {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 16px;
+            margin-bottom: 32px;
+            font-weight: 600;
+            color: #666;
         }
 
         h2 {
-            color: #2c3e50;
-            margin-top: 30px;
-            margin-bottom: 15px;
             font-size: 24px;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
+            color: #1a1a1a;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #667eea;
         }
 
-        h3 {
-            color: #34495e;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 18px;
+        h2:first-of-type {
+            margin-top: 0;
         }
 
         p {
-            margin-bottom: 15px;
+            margin-bottom: 16px;
+            color: #555;
         }
 
-        ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
         }
 
         li {
             margin-bottom: 8px;
-        }
-
-        strong {
-            color: #2c3e50;
-        }
-
-        .last-updated {
-            color: #7f8c8d;
-            font-size: 14px;
-            margin-bottom: 30px;
+            color: #555;
         }
 
         .highlight {
-            background: #e8f4f8;
-            border-left: 4px solid #3498db;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-
-        .contact {
-            background: #f8f9fa;
-            padding: 20px;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
             border-radius: 6px;
-            margin-top: 30px;
+            padding: 16px;
+            margin: 24px 0;
+            font-weight: 600;
+            color: #155724;
         }
 
-        a {
+        .no-data {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .no-data h3 {
+            color: #1976D2;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .no-data ul {
+            margin-bottom: 0;
+        }
+
+        .permission-box {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 6px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+
+        .permission-box strong {
+            color: #856404;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 32px;
+            text-align: center;
+        }
+
+        footer p {
+            color: #ecf0f1;
+            margin-bottom: 8px;
+        }
+
+        footer a {
             color: #3498db;
             text-decoration: none;
         }
 
-        a:hover {
+        footer a:hover {
             text-decoration: underline;
         }
 
-        hr {
-            border: none;
-            border-top: 1px solid #e0e0e0;
-            margin: 30px 0;
+        .contact-info {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 32px 20px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .content {
+                padding: 32px 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Privacy Policy for Auto Decline Cookies</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> January 2025</p>
+        <header>
+            <h1>🍪 Privacy Policy</h1>
+            <p class="subtitle">Auto Decline Cookies Browser Extension</p>
+        </header>
 
-        <h2>Overview</h2>
-        <p>Auto Decline Cookies ("we", "our", or "the extension") is committed to protecting your privacy. This privacy policy explains what data we collect, how we use it, and your rights.</p>
+        <div class="content">
+            <div class="last-updated">
+                Last Updated: October 8, 2025
+            </div>
 
-        <h2>Data Collection</h2>
+            <h2>Introduction</h2>
+            <p>Auto Decline Cookies ("the Extension") is committed to protecting your privacy. This Privacy Policy explains how the Extension operates and what data (if any) is collected when you use it.</p>
 
-        <h3>What We Collect</h3>
-        <p><strong>Payment Information:</strong></p>
-        <ul>
-            <li>When you subscribe, payment processing is handled by ExtensionPay (our payment processor) and Stripe</li>
-            <li>We store only: subscription status (paid/trial/expired) and trial start date</li>
-            <li>We do NOT store credit card details, billing addresses, or payment information</li>
-        </ul>
+            <h2>Data Collection</h2>
+            <div class="highlight">
+                We do NOT collect, store, or transmit any personal data.
+            </div>
 
-        <p><strong>Usage Data:</strong></p>
-        <ul>
-            <li>Installation date</li>
-            <li>Extension on/off status</li>
-            <li>NO browsing history</li>
-            <li>NO personal information</li>
-            <li>NO website content</li>
-            <li>NO tracking cookies</li>
-        </ul>
-
-        <h3>What We Do NOT Collect</h3>
-        <ul>
-            <li>❌ Browsing history</li>
-            <li>❌ Personal information (name, email, etc.)</li>
-            <li>❌ Website content you visit</li>
-            <li>❌ Search queries</li>
-            <li>❌ Cookies or tracking data</li>
-            <li>❌ Any data from websites you visit</li>
-        </ul>
-
-        <h2>How We Use Data</h2>
-        <p>The extension uses the collected data ONLY to:</p>
-        <ol>
-            <li>Determine if you have an active subscription</li>
-            <li>Track trial period expiration</li>
-            <li>Function properly (detect and click cookie banners)</li>
-        </ol>
-
-        <div class="highlight">
-            <strong>Important:</strong> The extension works entirely locally in your browser. It does not send your browsing data to any server.
-        </div>
-
-        <h2>Data Storage</h2>
-        <ul>
-            <li><strong>Subscription data</strong> is stored in Chrome's sync storage (syncs across your devices)</li>
-            <li><strong>No data</strong> is stored on external servers except:
+            <div class="no-data">
+                <h3>The Extension:</h3>
                 <ul>
-                    <li>Payment status (stored by ExtensionPay for subscription management)</li>
+                    <li>Does NOT collect your browsing history</li>
+                    <li>Does NOT track which websites you visit</li>
+                    <li>Does NOT store any personal information</li>
+                    <li>Does NOT send any data to external servers</li>
+                    <li>Does NOT use analytics or tracking tools</li>
+                    <li>Does NOT create user profiles</li>
                 </ul>
-            </li>
-        </ul>
+            </div>
 
-        <h2>Third-Party Services</h2>
+            <h2>How the Extension Works</h2>
+            <p>The Extension operates entirely locally in your browser:</p>
+            <ol>
+                <li><strong>Cookie Banner Detection:</strong> The Extension scans web pages you visit for cookie consent banners</li>
+                <li><strong>Automatic Clicking:</strong> When a banner is detected, it automatically clicks "Reject All" or similar buttons</li>
+                <li><strong>Local Operation:</strong> All processing happens locally in your browser - nothing is sent externally</li>
+            </ol>
 
-        <h3>ExtensionPay</h3>
-        <ul>
-            <li>Handles subscription management and payments</li>
-            <li>Privacy Policy: <a href="https://extensionpay.com/privacy" target="_blank">https://extensionpay.com/privacy</a></li>
-            <li>They process: subscription status and payment information via Stripe</li>
-        </ul>
+            <h2>Permissions Explained</h2>
+            <p>The Extension requests the following browser permissions:</p>
 
-        <h3>Stripe</h3>
-        <ul>
-            <li>Processes payments securely</li>
-            <li>Privacy Policy: <a href="https://stripe.com/privacy" target="_blank">https://stripe.com/privacy</a></li>
-            <li>We never see your payment details</li>
-        </ul>
+            <div class="permission-box">
+                <p><strong>storage</strong>: Used to store extension settings locally on your device (no data is sent externally)</p>
+            </div>
 
-        <h2>Permissions Explained</h2>
-        <p>The extension requests these permissions:</p>
-        <ul>
-            <li><strong>"storage"</strong> - To save your subscription status locally</li>
-            <li><strong>"activeTab"</strong> - To detect and click cookie banners on the current tab</li>
-            <li><strong>"notifications"</strong> - To show subscription confirmation (optional)</li>
-            <li><strong>"Access your data for all websites"</strong> - Required to detect cookie banners on any website you visit. The extension ONLY looks for cookie banner buttons and does NOT collect, store, or transmit your browsing data.</li>
-        </ul>
+            <div class="permission-box">
+                <p><strong>activeTab</strong>: Allows the Extension to interact with the current webpage to detect and click cookie banners</p>
+            </div>
 
-        <h2>Data Sharing</h2>
-        <p><strong>We do NOT:</strong></p>
-        <ul>
-            <li>Sell your data</li>
-            <li>Share your data with third parties (except payment processor)</li>
-            <li>Track your browsing</li>
-            <li>Collect analytics</li>
-            <li>Use advertising networks</li>
-        </ul>
+            <div class="permission-box">
+                <p><strong>all_urls</strong>: Required to run the Extension on all websites you visit to automatically decline cookies</p>
+            </div>
 
-        <p><strong>We ONLY share:</strong></p>
-        <ul>
-            <li>Subscription status with ExtensionPay (necessary for payment processing)</li>
-        </ul>
+            <p>These permissions are used solely for the Extension's core functionality and no data is collected or transmitted.</p>
 
-        <h2>Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul>
-            <li><strong>Access</strong> your data (subscription status) at any time through the extension popup</li>
-            <li><strong>Delete</strong> your data by uninstalling the extension</li>
-            <li><strong>Cancel</strong> your subscription at any time through ExtensionPay</li>
-            <li><strong>Request information</strong> about what data we have (contact us)</li>
-        </ul>
+            <h2>Third-Party Services</h2>
+            <p>The Extension includes a donation link to Buy Me a Coffee (buymeacoffee.com/nhftools). Clicking this link opens an external website. Please refer to Buy Me a Coffee's privacy policy for information about their data practices.</p>
 
-        <h2>Children's Privacy</h2>
-        <p>This extension is not directed at children under 13. We do not knowingly collect data from children.</p>
-
-        <h2>Changes to This Policy</h2>
-        <p>We may update this privacy policy occasionally. Changes will be posted here with an updated "Last Updated" date.</p>
-
-        <h2>Data Retention</h2>
-        <ul>
-            <li><strong>Subscription data:</strong> Kept while you're subscribed, deleted 30 days after unsubscription</li>
-            <li><strong>Local data:</strong> Deleted immediately when you uninstall the extension</li>
-        </ul>
-
-        <div class="contact">
-            <h2>Contact</h2>
-            <p>For privacy questions or concerns:</p>
+            <h2>Browser Storage</h2>
+            <p>The Extension may store minimal preference data locally in your browser using the browser's storage API. This data:</p>
             <ul>
-                <li>Email: <a href="mailto:jakegalea2@gmail.com">jakegalea2@gmail.com</a></li>
+                <li>Never leaves your device</li>
+                <li>Is not accessible to us or any third parties</li>
+                <li>Can be deleted at any time by removing the Extension</li>
             </ul>
+
+            <h2>Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last Updated" date at the top of this document. Continued use of the Extension after changes constitutes acceptance of the updated Privacy Policy.</p>
+
+            <h2>Children's Privacy</h2>
+            <p>The Extension does not knowingly collect any information from anyone, including children under the age of 13.</p>
+
+            <h2>Your Rights</h2>
+            <p>Since we do not collect any personal data, there is no data to access, modify, or delete. You maintain complete control over the Extension and can:</p>
+            <ul>
+                <li>Disable the Extension at any time through your browser settings</li>
+                <li>Uninstall the Extension to completely remove it and any locally stored preferences</li>
+            </ul>
+
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <p>If you have questions about this Privacy Policy or the Extension's privacy practices, you can contact us at:</p>
+                <p><strong>Email:</strong> [Your email address]</p>
+            </div>
+
+            <h2>Legal Compliance</h2>
+            <p>This Extension complies with:</p>
+            <ul>
+                <li>General Data Protection Regulation (GDPR)</li>
+                <li>California Consumer Privacy Act (CCPA)</li>
+                <li>Other applicable privacy laws</li>
+            </ul>
+            <p>Since no personal data is collected, processed, or stored, there are no data protection obligations to fulfill.</p>
+
+            <h2>Transparency</h2>
+            <p>The Extension is designed with privacy as a core principle. Its sole purpose is to enhance your privacy by automatically declining tracking cookies on websites you visit. We believe in practicing what we preach - your privacy matters to us, which is why we designed this Extension to operate entirely locally without any data collection.</p>
         </div>
 
-        <h2>Legal Compliance</h2>
-        <p>This extension complies with:</p>
-        <ul>
-            <li>GDPR (EU General Data Protection Regulation)</li>
-            <li>CCPA (California Consumer Privacy Act)</li>
-            <li>Chrome Web Store Privacy Requirements</li>
-        </ul>
-
-        <hr>
-
-        <div class="highlight">
-            <h3>In Simple Terms:</h3>
-            <p>This extension helps you decline cookies automatically. We don't collect your browsing data, track you, or sell information. We only know if you've paid for the extension. The extension works locally in your browser and doesn't send your data anywhere.</p>
-        </div>
+        <footer>
+            <p>&copy; 2025 Auto Decline Cookies</p>
+            <p>Protecting your privacy, one cookie banner at a time 🍪</p>
+        </footer>
     </div>
 </body>
 </html>
